@@ -1,0 +1,443 @@
+*{
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+}
+
+html, body{
+
+  height: 100vh;
+
+  color: #fff;
+
+  background: #333;
+
+  margin: 0;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+
+  display: grid;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+input, button{
+
+  background: none;
+
+  outline: none;
+
+}
+
+a {
+
+  font: inherit;
+
+  color: inherit;
+
+  -webkit-tap-highlight-color: transparent;
+
+}
+
+.landing{
+
+  height: 100vh;
+
+  width: 100vw;
+
+  background: url('/Img/bg.gif');
+
+  background-color: rgba(0, 0, 0, 0.45);
+
+  background-blend-mode: multiply;
+
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+  text-align: center;
+
+  display: grid;
+
+  /* justify-content: center;
+
+  align-items: center; */
+
+  place-content: center;
+
+}
+
+.landing .text-con{
+
+  margin: 0 auto;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-direction: column;
+
+  width: 90%;
+
+}
+
+.landing   h1{
+
+  font-size: 2rem;
+
+  font-weight: 700;
+
+  font-family: 'Poppins', sans-serif;
+
+  margin: .5rem 0;
+
+  position: relative;
+
+  isolation: isolate;
+
+  /* color: #96e8ff; */
+
+  /* font-family: 'Kaushan Script', cursive; */
+
+}
+
+/* .landing h1::before{
+
+  content: '';
+
+  height: 100%;
+
+  width: 43%;
+
+  background: #96e8ff;
+
+  border-radius: 1rem 1rem 0 0;
+
+  position: absolute;
+
+  z-index: -1;
+
+  display: block;
+
+} */
+
+.landing h1::after{
+
+  content: '';
+
+  height: 5px;
+
+  background: #ffb236;
+
+  width: 100%;
+
+  display: block;
+
+  margin-top: -10px;
+
+}
+
+.landing h1 + p{
+
+  font-size: 1rem;
+
+}
+
+.landing h3{
+
+  line-height: 1.2;
+
+  font-size: 4rem;
+
+  margin: 10px;
+
+}
+
+.landing button{
+
+  margin: 0 auto ;
+
+  background: white;
+
+  color: royalblue;
+
+  padding: .8rem;
+
+  border: none;
+
+  border-radius: .5rem;
+
+  width: 8rem;
+
+  font-size: 1.2rem;
+
+  font-weight: 500;
+
+}
+
+.landing .countdown{
+
+  font-size: 2rem;
+
+  font-weight: 600;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin-bottom: 5rem;
+
+}
+
+.landing .countdown > div{
+
+  padding: 1.4rem;
+
+  aspect-ratio: 1;
+
+  width: 9rem;
+
+  border: 1px solid white;
+
+  border-radius: .5rem;
+
+  margin: 5px;
+
+  opacity: .7;
+
+  background: rgba(155, 155, 255, 0.5);
+
+}
+
+.landing .countdown div span{
+
+  display: block;
+
+  font-size: 1.5rem;
+
+}
+
+.landing .footer{
+
+  position: absolute;
+
+  bottom: .8rem;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 90%;
+
+}
+
+.footer .social-media{
+
+  margin: 0 auto;
+
+  width: 80%;
+
+  text-align: center;
+
+}
+
+.social-media .fa-brands{
+
+  font-size: 2rem;
+
+  margin: 10px;
+
+}
+
+@media(max-width: 650px){
+
+  .landing h3{
+
+    font-size: 2.3rem;
+
+  }
+
+  
+
+  .landing p{
+
+    font-size: 1rem;
+
+  }
+
+  
+
+  .landing .countdown{
+
+    font-size: 1.8rem;
+
+    margin: 0 auto;
+
+    min-width: 90vw;
+
+  }
+
+  .landing .countdown div{
+
+    padding: .95rem;
+
+    aspect-ratio: 1;
+
+    width: 6.7rem;
+
+  }
+
+  
+
+  .landing .countdown div span{
+
+    font-size: 1.2rem;
+
+  }
+
+}
+
+@media(max-width:450px){
+
+  .landing .text-con{
+
+    max-width: 90vw; 
+
+  }
+
+   .landing h1{
+
+    font-size: 1.2rem;
+
+    margin: 0.5rem;
+
+   }
+
+   
+
+   .landing h3{
+
+     font-size: 1.5rem;
+
+   }
+
+   
+
+   .landing .text-con p{
+
+     font-size: .7rem;
+
+     /* display: none; */
+
+   }
+
+   
+
+   .landing .text-con h3 + p {
+
+     display: none;
+
+   }
+
+   
+
+    .landing .countdown{
+
+    margin: 0 auto;
+
+    font-size: 1rem;
+
+    max-width: 90vw;
+
+  }
+
+  .landing .countdown div{
+
+    padding: .8rem;
+
+    aspect-ratio: 1;
+
+    width: calc(90vw/4);
+
+  }
+
+  
+
+  .landing .countdown div span{
+
+    font-size: .5rem;
+
+  }
+
+}
+
+@media(max-height: 400px){
+
+  .landing h1{
+
+    font-size: 1.5rem;
+
+  }
+
+  .landing h3{
+
+    font-size: 2rem;
+
+  }
+
+  
+
+    .landing .countdown{
+
+    font-size: 1.4rem;
+
+  }
+
+  
+
+  .landing .text-con h3+p {
+
+    display: none;
+
+  }
+
+  
+
+  .landing .countdown div{
+
+    padding: .8rem;
+
+    aspect-ratio: 1;
+
+    width: 7rem
+
+  }
+
+  
+
+  .landing .countdown div span{
+
+    font-size: 1.2rem;
+
+  }
+
+}
