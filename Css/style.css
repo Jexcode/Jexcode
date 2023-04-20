@@ -106,9 +106,15 @@ a {
 
   font-family: 'Poppins', sans-serif;
 
-  margin: .5rem 0;
+  margin: .5rem auto;
 
-  position: relative;
+  position: absolute;
+
+  top: 1%;
+
+  left: 50%;
+
+  transform: translateX(-50%);
 
   isolation: isolate;
 
@@ -117,6 +123,7 @@ a {
   /* font-family: 'Kaushan Script', cursive; */
 
 }
+
 
 /* .landing h1::before{
 
@@ -391,12 +398,24 @@ a {
 }
 
 @media(max-height: 400px){
-
-  .landing h1{
+ .landing h1{
 
     font-size: 1.5rem;
 
+    position: relative;
+
+    inset: 0;
+
+    transform: translateX(0);
+
+    /* text-align: center; */
+
   }
+
+
+
+
+
 
   .landing h3{
 
