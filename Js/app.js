@@ -1,3 +1,17 @@
+// loader 
+
+const loader = document.querySelector('.loader');
+
+window.addEventListener('load', vanish);
+
+function vanish() {
+
+  loader.classList.add('disappear');
+
+}
+
+// loader ends
+
 const countDown = document.querySelector('.countdown');
 
 // set launch time
