@@ -52,6 +52,150 @@ a {
 
 }
 
+ /* preloader */
+
+.loader {
+
+  position: fixed;
+
+  inset: 0;
+
+  background: #d2d2f5;
+
+  height: 100%;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 1;
+
+}
+
+.disappear{
+
+  animation: vanish 1s forwards;
+
+ }
+
+    
+
+@keyframes vanish {
+
+100%{
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  }
+
+}
+
+.loader svg{
+
+  display: none;
+
+}
+
+#logo path:nth-child(2){
+
+      stroke-dasharray: 150.88;
+
+      stroke-dashoffset: 150.88;
+
+      animation: line-anime 2s ease infinite alternate;
+
+      
+
+    }
+
+    #logo path:nth-child(3){
+
+      stroke-dasharray: 192.56;
+
+      stroke-dashoffset: 193.56;
+
+      animation: line-anime 2s ease infinite alternate  0.3s;
+
+      
+
+    }
+
+    #logo path:nth-child(4){
+
+      stroke-dasharray: 180.63;
+
+      stroke-dashoffset: 180.63;
+
+      animation: line-anime 2s ease infinite alternate 0.6s;
+
+    }
+
+    #logo path:nth-child(5){
+
+      stroke-dasharray: 164.38;
+
+      stroke-dashoffset: 164.38;
+
+      animation: line-anime 2s ease infinite alternate 0.9s;
+
+    }
+
+    #logo path:nth-child(6){
+
+      stroke-dasharray: 168.91;
+
+      stroke-dashoffset: 168.91;
+
+      animation: line-anime 2s ease infinite alternate 1.2s;
+
+    }
+
+    #logo path:nth-child(7){
+
+      stroke-dasharray: 227.18;
+
+      stroke-dashoffset: 227.18;
+
+      animation: line-anime 2s ease infinite alternate  1.5s;
+
+    }
+
+    #logo path:nth-child(8){
+
+      stroke-dasharray: 192.56;
+
+      stroke-dashoffset: 192.56;
+
+      animation: line-anime 2s ease infinite alternate  1.8s;
+
+    }
+
+    
+
+    @keyframes line-anime{
+
+      to{
+
+        stroke-dashoffset: 0;
+
+      }
+
+    }
+
+    
+
+    
+
+  
+
+/* preloader ends */
+
 .landing{
 
   height: 100vh;
@@ -276,6 +420,14 @@ a {
 }
 
 @media(max-width: 650px){
+  .loader svg {
+    display: block;
+  }
+  
+  .loader img {
+    display: none;
+  }
+  
 
   .landing h3{
 
@@ -324,6 +476,14 @@ a {
 }
 
 @media(max-width:450px){
+  .loader svg {
+    display: block;
+  }
+  
+  .loader img {
+    display: none;
+  }
+  
 
   .landing .text-con{
 
