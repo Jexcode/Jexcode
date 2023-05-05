@@ -16,7 +16,7 @@ const countDown = document.querySelector('.countdown');
 
 // set launch time
 
-const launchDate = new Date('May 5, 2023 20:00:00').getTime();
+const launchDate = new Date('June 5, 2023 20:00:00').getTime();
 
 // Update every second
 
