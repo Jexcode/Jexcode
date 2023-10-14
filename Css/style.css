@@ -196,427 +196,590 @@ a {
 
 /* preloader ends */
 
-.landing{
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Kaushan+Script&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap');
 
-  height: 100vh;
+:root {
+	--text: rgba(5, 15, 11, 0.8);
+	--grey-text: #777;
+	--background: rgb(228, 241, 237);
+	--background: var(--text-white);
+	--primary-color: rgb(145, 217, 185);
+	--secondary-color: rgb(218, 226, 223);
+	--secondary-color-500: rgb(189, 199, 195);
+	--accent-color: rgb(58, 167, 118);
+	--btn-white: #fff;
+	--text-white: #fff;
+	--text-white2: rgba(255, 255, 255, 0.55);
+	--dk-bg: rgba(36, 42, 39, .7);
+	--blur-shadow: rgba(36, 42, 39, .1);
+	--heading: 2rem;
+	--line-color: var(--secondary-color);
+	--input-color: rgba(239, 239, 239, 0.8);
 
-  width: 100vw;
-
-  background: url('../Img/budio_hero_illustration_for_animation_2 (1).gif');
-
-  background-color: rgba(0, 0, 0, 0.45);
-
-  background-blend-mode: multiply;
-
-  background-size: cover;
-
-  background-repeat: no-repeat;
-
-  background-position: center;
-
-  text-align: center;
-
-  display: grid;
-
-  /* justify-content: center;
-
-  align-items: center; */
-
-  place-content: center;
-
+	--transition: all 0.85s ease-in-out;
 }
 
-.landing .text-con{
-
-  margin: 0 auto;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  flex-direction: column;
-
-  width: 90%;
-
+.dark-theme{
+	--background: rgb(0, 0, 0);
+	--blur-shadow: rgba(0, 52, 36, 0.59);
+	--secondary-color: rgb(18, 48, 33);
+	--secondary-color: var(--dk-bg);
+	--btn-white: var(--accent-color);
+	--line-color: var(--dk-bg);
+	--input-color: rgba(239, 239, 239, 0.1);
+	--primary-color: var(--accent-color);
+	--text: rgb(217, 247, 231);
 }
 
-.landing   h1{
 
-  font-size: 2rem;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
-  font-weight: 700;
+::selection {
+	background: var(--primary-color);
+	color: #fff;
+}
 
-  font-family: 'Poppins', sans-serif;
+html{
+  color-scheme: dark light ;
+}
 
-  margin: .5rem auto;
+body {
+  animation: fade-in 3s forwards;
+	background: var(--background);
+	color: var(--text);
+	font-family: 'Inter', sans-serif;
+	height: 100%;
+	padding: 20px;
+	transition: var(--transition);
+	width: 100%;
+}
 
+main {
+	height: 100%;
+	width: 100%;
+}
+
+.ratio-one {
+	aspect-ratio: 1/1;
+}
+
+.ds-flex {
+	display: flex;
+}
+
+.ds-flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+.ds-grid {
+	display: grid;
+}
+
+.center {
+	align-items: center;
+	justify-content: center;
+}
+
+.space{
+  justify-content: space-between;
+}
+
+.m-auto {
+	margin: auto;
+}
+
+.txt-center {
+	text-align: center;
+}
+
+.w-100 {
+	width: 100%;
+}
+
+/* Profile */
+
+.profile {
+	/* background: rgba(255, 0, 0, 0.279); */
+	padding: 100px 0 30px;
+	position: relative;
+}
+
+.profile .theme-control{
+  animation: beat 1s alternate-reverse infinite;
+  font-size: 1.5rem;
   position: absolute;
-
-  top: 1%;
-
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  isolation: isolate;
-
-  /* color: #96e8ff; */
-
-  /* font-family: 'Kaushan Script', cursive; */
-
+  top: 0;
+  right: 0;
+  padding: 1rem;
 }
 
+@keyframes beat{
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(1.1);
+  }
+}
 
-/* .landing h1::before{
+.profile .profile-img {
+	border: 3px solid var(--accent-color);
+	border-radius: 50%;
+	margin-bottom: 10px;
+	padding: 3px;
+	width: 150px;
+}
 
-  content: '';
+.profile .profile-img img {
+	border-radius: 50%;
+	object-fit: fill;
+	object-position: 50% 50%;
+}
 
-  height: 100%;
+.profile .profile-info {
+	color: var(--grey-text);
+}
 
-  width: 43%;
+.profile .profile-info h1 {
+	color: var(--text);
+	margin-bottom: 5px;
+	font-weight: 600;
+}
 
-  background: #96e8ff;
+.profile .profile-info h4 {
+	font-size: 0.85rem;
+	margin-bottom: 10px;
+}
 
-  border-radius: 1rem 1rem 0 0;
+.profile .profile-info .social-icon {
+	color: var(--text);
+	font-size: 1.5rem;
+	gap: 10%;
+	width: 50%;
+}
 
-  position: absolute;
+.profile .profile-info .social-icon a {
+	color: inherit;
+	transition: var(--transition);
+}
 
-  z-index: -1;
+.profile .profile-info .social-icon a:hover {
+	color: var(--primary-color);
+}
+/* Profile ends */
 
-  display: block;
+/* Experience */
 
+.experience .ex-info {
+	grid-template-columns: repeat(3, 1fr);
+	gap: 15px;
+	padding: 10px;
+}
+
+.experience .ex-info h3 {
+	font-size: 1.2rem;
+	margin-bottom: 5px;
+}
+
+.experience .ex-info p {
+	font-size: 1rem;
+}
+
+/* .experience .ex-info .ex-info-items{
+    background: turquoise;
 } */
 
-.landing h1::after{
-
-  content: '';
-
-  height: 5px;
-
-  background: #ffb236;
-
-  width: 100%;
-
-  display: block;
-
-  margin-top: -10px;
-
+.experience .contact {
+	gap: 10px;
+	grid-template-columns: 3fr 1fr 1fr;
+	margin-block: 10px;
+	padding: 10px 35px;
 }
 
-.landing h1 + p{
-
-  font-size: 1rem;
-
+.experience .contact button {
+	background: var(--accent-color);
+	border: none;
+	border-radius: 8px;
+	color: var(--text-white);
+	/* color: var(--background); */
+	cursor: pointer;
+	font-size: 1.1rem;
+	font-weight: 500;
+	margin-right: 10px;
+	padding: 15px;
+	transition: var(--transition);
 }
 
-.landing h3{
-
-  line-height: 1.2;
-
-  font-size: 4rem;
-
-  margin: 10px;
-
+.experience .contact button:focus {
+	background: var(--primary-color);
+	opacity: 0.75;
 }
 
-.landing button{
+.experience .contact .button {
+	background: var(--secondary-color);
+	border: none;
+	border-radius: 8px;
+	color: var(--text);
+	cursor: pointer;
+	font-size: 1.8rem;
+	padding: 15px;
+	transition: var(--transition);
+}
 
-  margin: 0 auto ;
+.experience .contact .button:hover {
+	color: var(--primary-color);
+	opacity: .75;
+}
+/* Experience ends */
 
-  background: white;
+/* portfolio */
 
-  color: royalblue;
+.portfolio {
+	/* background: turquoise; */
+	padding: 0 20px;
+}
 
-  padding: .8rem;
+.portfolio .portfolio-tab-control {
+	background: var(--secondary-color);
+	border-radius: 12px;
+	font-size: 1.2rem;
+	font-weight: 600;
+	gap: 10px;
+	grid-template-columns: repeat(2, 1fr);
+	isolation: isolate;
+	padding: 10px;
+	position: relative;
+	text-align: center;
+}
 
-  border: none;
+.portfolio .portfolio-tab-control .portfolio-tab-item {
+	cursor: pointer;
+	padding: 20px;
+}
 
-  border-radius: .5rem;
+.portfolio .portfolio-tab-control .click-bg {
+	background-color: var(--background);
+	border-radius: 10px;
+	height: calc(100% - 20px);
+	position: absolute;
+	top: 10px;
+	transition: var(--transition);
+	width: calc(50% - 20px);
+	z-index: -1;
+}
 
-  width: 8rem;
+.portfolio .portfolio-tab-control .click-bg.active-one {
+	left: 10px;
+}
+.portfolio .portfolio-tab-control .click-bg.active-two {
+	left: calc(50% + 10px);
+}
 
+.portfolio .portfolio-items {
+	gap: 15px;
+	grid-template-columns: 1fr;
+	margin-block: 50px;
+}
+
+.portfolio .portfolio-var{
+  display: none;
+}
+
+.portfolio .portfolio-var.show-active{
+  animation: fade-in 3s forwards;
+  display: grid;
+  transition: var(--transition);
+}
+
+@keyframes fade-in{
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.portfolio .portfolio-items > .portfolio-card {
+	background: var(--dk-bg);
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 10rem 0 0;
+	transition: var(--transition);
+}
+
+.portfolio .portfolio-items > .portfolio-card:hover {
+	transform: scale(1.05);
+}
+
+.portfolio .portfolio-items .portfolio-card .portfolio-card-content {
+	--padding: 1rem;
+
+	background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.2) 10%, black);
+	color: var(--text-white2);
+	padding: var(--padding);
+	transform: translateY(70%);
+	transition: var(--transition);
+}
+
+.portfolio .portfolio-items .portfolio-card:hover .portfolio-card-content {
+	transform: translateY(0);
+}
+
+.portfolio
+	.portfolio-items
+	.portfolio-card
+	.portfolio-card-content
+	> *:not(.portfolio .portfolio-items .portfolio-card .portfolio-card-title) {
+	opacity: 0;
+}
+
+.portfolio
+	.portfolio-items
+	.portfolio-card:hover
+	.portfolio-card-content
+	> *:not(.portfolio .portfolio-items .portfolio-card .portfolio-card-title) {
+	opacity: 1;
+	transition-delay: 0.65s;
+}
+
+.portfolio-items .portfolio-card .portfolio-card-content .portfolio-card-title {
+	color: var(--text-white);
+	margin-bottom: 15px;
+	position: relative;
+	width: max-content;
+}
+
+
+.portfolio-items
+	.portfolio-card
+	.portfolio-card-content
+	.portfolio-card-title::before {
+	background: var(--accent-color);
+	border-radius: 0 3px 3px 0;
+	bottom: -8px;
+	content: "";
+	height: 3px;
+	left: calc(0rem - var(--padding));
+	position: absolute;
+	transition: var(--transition);
+	transform: scale(0);
+	transform-origin: left;
+	width: calc(100% + var(--padding));
+}
+
+.portfolio-items
+	.portfolio-card:hover
+	.portfolio-card-content
+	.portfolio-card-title::before {
+	transform: scale(1);
+	transition-delay: 0.5s;
+}
+
+.portfolio-items .portfolio-card .portfolio-card-content .portfolio-btn {
+	background: var(--accent-color);
+	border: none;
+	border-radius: 8px;
+	color: var(--text-white);
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 500;
+	margin-block: 10px;
+	padding: 0.5rem 1.25rem;
+	text-decoration: none;
+	transition: var(--transition);
+}
+
+.portfolio-items .portfolio-card .portfolio-card-content .portfolio-btn:hover {
+	background: var(--text-white);
+	color: var(--text);
+}
+
+
+.portfolio .portfolio-skills .portfolio-skills-heading{
+  font-size: var(--heading);
+  margin-block: 20px;
+}
+
+
+.portfolio .portfolio-skills .portfolio-skills-content{
+  gap: 15px;
+  grid-template-columns: 1fr;
+}
+
+
+.portfolio .portfolio-skills .portfolio-skills-content .portfolio-skills-items{
+}
+
+.portfolio-skills .portfolio-skills-content .portfolio-skills-items .skill-title{
   font-size: 1.2rem;
-
-  font-weight: 500;
-
+  font-weight: 700;
 }
 
-.landing .countdown{
-
-  font-size: 2rem;
-
-  font-weight: 600;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  margin-bottom: 5rem;
-
+.portfolio-skills .portfolio-skills-content .portfolio-skills-items .skill-bar{
+  background: var(--line-color);
+  border-radius: 10px; 
+  height: 20px;
+  margin-top: 10px;
+  position: relative;
+  /* padding: 2.5px; */
 }
 
-.landing .countdown > div{
-
-  padding: 1.4rem;
-
-  aspect-ratio: 1;
-
-  width: 9rem;
-
-  border: 1px solid white;
-
-  border-radius: .5rem;
-
-  margin: 5px;
-
-  opacity: .7;
-
-  background: rgba(155, 155, 255, 0.5);
-
-}
-
-.landing .countdown div span{
-
-  display: block;
-
-  font-size: 1.5rem;
-
-}
-
-.landing .footer{
-
+.portfolio-skills .portfolio-skills-content .portfolio-skills-items .skill-bar .bar{
+  background: var(--accent-color);
+  border-radius: 5px; 
+  display: inline-block;
+  height: 10px;
   position: absolute;
-
-  bottom: .8rem;
-
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  width: 90%;
-
+  top:/* 50%*/ 5px ;
+  left: /*0% */ 5px;
+  /* transform: translate(5px, -50%); */
+  transform-origin: left; 
+  width: calc(100% - 10px);
 }
 
-.footer .social-media{
-
-  margin: 0 auto;
-
-  width: 80%;
-
-  text-align: center;
-
+.grow{
+  animation: grow 3s forwards;
 }
 
-.social-media .fa-brands{
-
-  font-size: 2rem;
-
-  margin: 10px;
-
+.portfolio-skills .portfolio-skills-content .portfolio-skills-items:nth-child(1) .skill-bar .bar{
+  width: calc(50% + 10px);
+}
+.portfolio-skills .portfolio-skills-content .portfolio-skills-items:nth-child(2) .skill-bar .bar{
+  width: calc(40% + 10px);
+}
+.portfolio-skills .portfolio-skills-content .portfolio-skills-items:nth-child(3) .skill-bar .bar{
+  width: calc(30% + 10px);
+}
+.portfolio-skills .portfolio-skills-content .portfolio-skills-items:nth-child(4) .skill-bar .bar{
+  width: calc(20% + 10px);
+}
+.portfolio-skills .portfolio-skills-content .portfolio-skills-items:nth-child(5) .skill-bar .bar{
+  width: calc(50% + 10px);
+}
+.portfolio-skills .portfolio-skills-content .portfolio-skills-items:nth-child(6) .skill-bar .bar{
+  width: calc(80% + 10px);
 }
 
-@media(max-width: 650px){
-  .loader svg {
-    display: block;
+
+@keyframes grow{
+  from{
+    transform: scaleX(0);
   }
-  
-  .loader img {
-    display: none;
+  to{
+    transform: scaleX(1);
   }
-  
-
-  .landing h3{
-
-    font-size: 2.3rem;
-
-  }
-
-  
-
-  .landing p{
-
-    font-size: 1rem;
-
-  }
-
-  
-
-  .landing .countdown{
-
-    font-size: 1.8rem;
-
-    margin: 0 auto;
-
-    min-width: 90vw;
-
-  }
-
-  .landing .countdown div{
-
-    padding: .95rem;
-
-    aspect-ratio: 1;
-
-    width: 6.7rem;
-
-  }
-
-  
-
-  .landing .countdown div span{
-
-    font-size: 1.2rem;
-
-  }
-
 }
 
-@media(max-width:450px){
-  .loader svg {
-    display: block;
-  }
-  
-  .loader img {
-    display: none;
-  }
-  
 
-  .landing .text-con{
-
-    max-width: 90vw; 
-
-  }
-
-   .landing h1{
-
-    font-size: 1.2rem;
-
-    margin: 0.5rem;
-
-   }
-
-   
-
-   .landing h3{
-
-     font-size: 1.5rem;
-
-   }
-
-   
-
-   .landing .text-con p{
-
-     font-size: .7rem;
-
-     /* display: none; */
-
-   }
-
-   
-
-   .landing .text-con h3 + p {
-
-     display: none;
-
-   }
-
-   
-
-    .landing .countdown{
-
-    margin: 0 auto;
-
-    font-size: 1rem;
-
-    max-width: 90vw;
-
-  }
-
-  .landing .countdown div{
-
-    padding: .8rem;
-
-    aspect-ratio: 1;
-
-    width: calc(90vw/4);
-
-  }
-
-  
-
-  .landing .countdown div span{
-
-    font-size: .5rem;
-
-  }
-
+.portfolio .q-message{
+  margin-block: 20px;
 }
 
-@media(max-height: 400px){
- .landing h1{
-
-    font-size: 1.5rem;
-
-    position: relative;
-
-    inset: 0;
-
-    transform: translateX(0);
-
-    /* text-align: center; */
-
-  }
-
-
-
-
-
-
-  .landing h3{
-
-    font-size: 2rem;
-
-  }
-
-  
-
-    .landing .countdown{
-
-    font-size: 1.4rem;
-
-  }
-
-  
-
-  .landing .text-con h3+p {
-
-    display: none;
-
-  }
-
-  
-
-  .landing .countdown div{
-
-    padding: .8rem;
-
-    aspect-ratio: 1;
-
-    width: 7rem
-
-  }
-
-  
-
-  .landing .countdown div span{
-
-    font-size: 1.2rem;
-
-  }
-
+.portfolio .q-message h3{
+  font-size: calc(var(--heading) - 0.5rem);
 }
+
+.portfolio .q-message form{
+  background: var(--background);
+  border-radius: 1rem;
+  filter : drop-shadow(0 0 25px var(--blur-shadow));
+  margin-block: 20px;
+  margin-inline: auto;
+  padding: 15px;
+  max-width: 500px;
+  transition: var(--transition);
+}
+
+
+.portfolio .q-message form > div{
+  padding-block: 10px; 
+}
+
+.portfolio .q-message form input,
+.portfolio .q-message form textarea{
+  background: var(--input-color);
+  border: none;
+  color: var(--text);
+  border-radius: 5px; 
+  outline: none;
+  padding: .8rem 1rem;
+  resize: none;
+  width: 100%;
+}
+
+.portfolio .q-message form > div > label{
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 10px; 
+}
+
+.portfolio .q-message form button{
+  background: var(--accent-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--text-white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  outline: none;
+  padding: .8rem 1rem;
+  resize: none;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.portfolio .q-message form button:focus{
+  background: var(--primary-color);
+  opacity: 0.85;
+}
+/* portfolio ends */
+
+/* footer  */
+
+footer hr{
+  background: var(--primary-color);
+  border: none;
+  border-radius: 1.5px;
+  height: 3px;
+  outline: none;
+}
+
+footer p{
+  margin: 10px 0;
+}
+
+footer p:last-child{
+  margin-top: 0;
+}
+
+footer p a{
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+
+/* footer ends */
+
+
+/* desktop */
+@media screen and (min-width: 750px) {
+	main {
+		margin-inline: auto;
+		max-width: 600px;
+	}
+
+	.portfolio .portfolio-items {
+		grid-template-columns: 1fr 1fr;
+	}
+	
+	.portfolio .portfolio-skills .portfolio-skills-content {
+	  grid-template-columns: 1fr 1fr;
+	}
+}
+
