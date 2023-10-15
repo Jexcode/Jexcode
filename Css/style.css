@@ -315,6 +315,15 @@ main {
 	transition: var(--transition);
 }
 
+.portfolio .portfolio-items > .portfolio-card:first-child{
+  background-color: var(--dk-bg);
+  background-image: url('/Img/the-PI.jpg');
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
 .portfolio .portfolio-items > .portfolio-card:hover {
 	transform: scale(1.05);
 }
@@ -399,7 +408,7 @@ main {
 
 .portfolio-items .portfolio-card .portfolio-card-content .portfolio-btn:hover {
 	background: var(--text-white);
-	color: var(--text);
+	color: var(--accent-color);
 }
 
 
