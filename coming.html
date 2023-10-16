@@ -7,19 +7,19 @@
 		<title>Jexcode Social Portfolio</title>
 		<link rel="shortcut icon" href="/Img/favicon.png" type="image/x-icon" />
 		<script src="https://kit.fontawesome.com/4f89df3a85.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="/Css/style.css" />
+		<link rel="stylesheet" href="style.css"/>
 	</head>
 
-<body class="dark-them" style="--vh: ; height: var(--vh);">
-  <header>
-    <h1>Jexcode</h1>
+<body>
+  <section class="coming ds-grid txt-center w-100 m-auto ">
+    <header class="w-100 header ds-flex space">
+    <a href="./"><h1>Jexcode</h1></a>
     <div class="theme-control" onclick="darkTheme()">
       <i class="fa-solid fa-moon"></i>
     </div>
   </header>
   
-<main class="h-100 ds-flex center">
-<section class="coming ds-grid txt-center w-100 m-auto">
+  <div class="info ds-grid center">
   <div class="coming-img">
     <a href="https://storyset.com/web"><img src="/Img/Programming-amico 1.svg" alt="Jex's coding" width="100%"></a>
   </div>
@@ -27,33 +27,28 @@
    <div class="text-con"> 
    <h3>Jex is Coding</h3>
    </div>
+   <p>
+   "Stay tuned! Something amazing is on the horizon. Our exciting new website is launching soon. Get ready to be inspired."</p>
     <p>Coming Soon</p>
-    <a href="./">Back to home <i class="fa-solid fa-angle-right"></i></a>
+    
+    <div class="btn-field ds-flex">
+    <a href="./" class="button">Back to home <i class="fa-solid fa-angle-right"></i></a>
+    <a href="mailto:jexcode22@gmail.com" class="button">Contact me <i class="fa-solid fa-message"></i></a>
+    </div>
+    
   </div>
-</section>
-</main>
-
-<footer>
+  </div>
+  
+  
+  <footer>
   <hr>
   <p class="txt-center">This site was inspired by <a href="https://youtube.com/@Bedimcode?si=nF684-3NnOdDbw1M">Bedimcode</a></p>
   <p class="txt-center">Made with 💚 by<a href="https://github.com/Jexcode">Jexcode</a> &copy; 2023</p>
 </footer>
-<script>
-  function darkTheme() {
-    console.log('test');
-    document.body.classList.toggle('dark-theme');
-  
-    const body = document.body;
-    const themeControl1 = document.querySelector('.theme-control');
-  
-    if (body.classList.contains("dark-theme")) {
-      themeControl1.innerHTML = '<i class="fa-solid fa-sun"></i>';
-    } else {
-      themeControl1.innerHTML = '<i class="fa-solid fa-moon"></i>';
-    };
-  };
-  
-</script>
+
+</section>
+
+<script src="/Js/main.js"></script>
 <noscript>
   <h3 class="txt-center">This site can't work without JavaScript</h3>
 </noscript>
