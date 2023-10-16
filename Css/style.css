@@ -577,8 +577,8 @@ header h1{
 
 
 .coming{
-  /* background: var(--secondary-color); */
   font-family: 'Poppins', sans-serif;
+  margin-block: 50px 100px;
   place-items: center;
 }
 
