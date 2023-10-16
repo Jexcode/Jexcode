@@ -618,8 +618,7 @@ header .theme-control{
   font-size: var(--heading2);
   font-family: monospace;
   letter-spacing: 5px;
-  width: 80%;
-  margin-inline:10%; 
+  width: 100%;
   white-space: nowrap;
   margin-bottom: 10px;
   overflow: hidden;
@@ -766,7 +765,11 @@ footer p a{
   :root{
     --heading2: 1.8rem;
   }
-  
+  .coming .coming-text .text-con h3{
+   width: 80%;
+  margin-inline:10%;
+  }
+
   .coming .coming-text .btn-field{
     justify-content: space-between;
   }
