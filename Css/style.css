@@ -15,6 +15,7 @@
 	--dk-bg: rgba(36, 42, 39, .7);
 	--blur-shadow: rgba(36, 42, 39, .1);
 	--heading: 2rem;
+	--heading2: 3rem;
 	--line-color: var(--secondary-color);
 	--input-color: rgba(239, 239, 239, 0.8);
 
@@ -65,6 +66,13 @@ main {
 	width: 100%;
 }
 
+a {
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .ratio-one {
 	aspect-ratio: 1/1;
 }
@@ -103,6 +111,10 @@ main {
 	width: 100%;
 }
 
+.h-100{
+  height: 100%;
+}
+
 /* Profile */
 
 .profile {
@@ -111,7 +123,8 @@ main {
 	position: relative;
 }
 
-.profile .theme-control{
+.profile .theme-control,
+header .theme-control{
   animation: beat 1s alternate-reverse infinite;
   font-size: 1.5rem;
   position: absolute;
@@ -322,7 +335,6 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 
 .portfolio .portfolio-items > .portfolio-card:hover {
 	transform: scale(1.05);
@@ -550,6 +562,91 @@ main {
 }
 /* portfolio ends */
 
+/* coming soon */
+
+header {
+  margin-block: 0 10px;
+  padding: 1rem;
+  position: relative;
+}
+
+header h1{
+  color: var(--accent-color);
+}
+
+
+
+.coming{
+  /* background: var(--secondary-color); */
+  font-family: 'Poppins', sans-serif;
+  place-items: center;
+}
+
+.coming .coming-img{
+  aspect-ratio: 1/1;
+  width: 100%;
+}
+
+.coming .coming-img img{
+  width: 100%;
+}
+
+.coming .coming-text .text-con {
+  display: inline-block;
+}
+
+.coming .coming-text .text-con  h3{
+  background-color: var(--accent-color);
+  background: linear-gradient(to bottom,var(--secondary-color), var(--primary-color), var(--accent-color));
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  border-right: 3px solid var(--accent-color);
+  font-size: var(--heading2);
+  font-family: monospace;
+  letter-spacing: 5px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation:
+    typing 2s steps(13),
+    cursor .4s step-end infinite alternate;
+  ;
+}
+
+@keyframes cursor{
+  50%{
+    border-color: transparent;
+  }
+}
+
+@keyframes typing{
+  from {
+    width: 0;
+  }
+}
+
+.coming .coming-text p{
+  color: var(--grey-text);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.coming .coming-text a{
+  color: var(--text);
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* coming soon */
+
 /* footer  */
 
 footer hr{
@@ -570,7 +667,7 @@ footer p:last-child{
 
 footer p a{
   color: var(--primary-color);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -592,4 +689,10 @@ footer p a{
 	.portfolio .portfolio-skills .portfolio-skills-content {
 	  grid-template-columns: 1fr 1fr;
 	}
+}
+
+@media screen and (max-width: 450px){
+  :root{
+    --heading2: 1.8rem;
+  }
 }
