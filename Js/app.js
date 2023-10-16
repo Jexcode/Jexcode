@@ -34,19 +34,3 @@ portfolioTabItemTwo.addEventListener('click', (e)=>{
          });
      
 });
-
-
-const themeControl = document.querySelector('.theme-control');
-
-themeControl.addEventListener('click', ()=>{
-  document.body.classList.toggle('dark-theme');
-  
-  const body = document.body;
-  
-  if (body.classList.contains("dark-theme")) {
-  themeControl.innerHTML = '<i class="fa-solid fa-sun"></i>';
-  } else {
-  themeControl.innerHTML = '<i class="fa-solid fa-moon"></i>';
-  }
-});
-
