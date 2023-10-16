@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jexcode Social Portfolio</title>
+		<link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon" />
+		<script src="https://kit.fontawesome.com/4f89df3a85.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+<body class="dark-them" style="--vh: ; height: var(--vh);">
+  <header>
+    <h1>Jexcode</h1>
+    <div class="theme-control" onclick="darkTheme()">
+      <i class="fa-solid fa-moon"></i>
+    </div>
+  </header>
+  
+<main class="h-100 ds-flex center">
+<section class="coming ds-grid txt-center w-100 m-auto">
+  <div class="coming-img">
+    <a href="https://storyset.com/web"><img src="/Social Portfolio/assets/Programming-amico 1.svg" alt="Jex's coding" width="100%"></a>
+  </div>
+  <div class="coming-text">
+   <div class="text-con"> 
+   <h3>Jex is Coding</h3>
+   </div>
+    <p>Coming Soon</p>
+    <a href="./">Back to home <i class="fa-solid fa-angle-right"></i></a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <hr>
+  <p class="txt-center">This site was inspired by <a href="https://youtube.com/@Bedimcode?si=nF684-3NnOdDbw1M">Bedimcode</a></p>
+  <p class="txt-center">Made with 💚 by<a href="https://github.com/Jexcode">Jexcode</a> &copy; 2023</p>
+</footer>
+<script>
+  function darkTheme() {
+    console.log('test');
+    document.body.classList.toggle('dark-theme');
+  
+    const body = document.body;
+    const themeControl1 = document.querySelector('.theme-control');
+  
+    if (body.classList.contains("dark-theme")) {
+      themeControl1.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    } else {
+      themeControl1.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    };
+  };
+  
+</script>
+<noscript>
+  <h3 class="txt-center">This site can't work without JavaScript</h3>
+</noscript>
+</body>
+</html>
