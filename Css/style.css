@@ -42,8 +42,8 @@
 }
 
 ::selection {
-	background: var(--primary-color);
-	color: #fff;
+  background: rgb(145, 217, 185);
+  color: #fff;
 }
 
 html{
@@ -56,7 +56,7 @@ body {
 	color: var(--text);
 	font-family: 'Inter', sans-serif;
 	height: 100%;
-	padding: 20px;
+	padding: 0 20px;
 	transition: var(--transition);
 	width: 100%;
 }
@@ -564,36 +564,45 @@ header .theme-control{
 
 /* coming soon */
 
-header {
-  margin-block: 0 10px;
-  padding: 1rem;
+.coming{
+  align-items: center;
+  height: 100dvh;
+  gap: 20px;
+  justify-content: space-between;
+  /* margin: auto; */
+}
+
+.coming .header{
   position: relative;
 }
 
-header h1{
+.coming .header h1{
   color: var(--accent-color);
+  font-size: 2rem;
+  display: inline-block;
 }
 
+.coming .header .theme-control{
+  font-size: 1.5rem;
+  position: absolute;
+  position: static;
+  margin-block: auto;
+  padding: 0;
+}
 
-
-.coming{
-  font-family: 'Poppins', sans-serif;
-  margin-block: 100px 150px;
-  place-items: center;
+.coming .info{
+  grid-template-columns: 1fr;
+  /* max-width: 600px; */
 }
 
 .coming .coming-img{
-  aspect-ratio: 1/1;
   width: 100%;
 }
 
-.coming .coming-img img{
-  width: 100%;
+.coming .coming-text{
+  text-align: center;
 }
 
-.coming .coming-text .text-con {
-  display: inline-block;
-}
 
 .coming .coming-text .text-con  h3{
   background-color: var(--accent-color);
@@ -609,13 +618,20 @@ header h1{
   font-size: var(--heading2);
   font-family: monospace;
   letter-spacing: 5px;
-  width: 100%;
+  width: 80%;
+  margin-inline:10%; 
   white-space: nowrap;
+  margin-bottom: 10px;
   overflow: hidden;
   animation:
-    typing 2s steps(13),
+    typing 2s steps(14),
     cursor .4s step-end infinite alternate;
   ;
+  padding: 0 10px;
+}
+
+.coming .coming-text .text-con  h3::selection{
+  color: #fff;
 }
 
 @keyframes cursor{
@@ -630,19 +646,64 @@ header h1{
   }
 }
 
-.coming .coming-text p{
-  color: var(--grey-text);
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 5px;
+
+
+.coming .coming-text .btn-field{
+  display: flex;
+  justify-content: space-around;
+  margin-block: 20px;
+  padding: 0 20px;
 }
 
-.coming .coming-text a{
-  color: var(--text);
+.coming .coming-text .btn-field .button{
+  background: var(--accent-color);
+  border: none;
+  border-radius: 40px;
+  color: var(--text-white);
   display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.1;
+  padding: 15px 30px;
+  transition: var(--transition);
+}
+
+.coming .coming-text .btn-field .button:hover{
+  opacity: 0.65;
+}
+
+.coming .coming-text .btn-field .button:last-child{
+  background: transparent;
+  outline: 3px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.coming .coming-text .btn-field .button .fa-solid{
+  margin-left: 5px;
+}
+
+.coming footer hr{
+  background: var(--primary-color);
+  border: none;
+  border-radius: 1.5px;
+  height: 3px;
+  outline: none;
+  margin-top: 10px;
+}
+
+.coming footer p{
+  margin: 10px 0;
+  text-align: center;
+}
+
+.coming footer p:last-child{
+  margin-top: 0;
+}
+
+.coming footer p a{
+  color: var(--primary-color);
   font-size: 1rem;
-  font-weight: 700;
-  text-decoration: none;
+  font-weight: 600;
 }
 
 /* coming soon */
@@ -689,10 +750,29 @@ footer p a{
 	.portfolio .portfolio-skills .portfolio-skills-content {
 	  grid-template-columns: 1fr 1fr;
 	}
+	
+	.coming .info{
+	  grid-template-columns: 1fr 1fr;
+	  /* max-width: 600px; */
+	}
+	
+	.coming .coming-text .text-con h3{
+	  margin-inline:0;
+	  width: 100%;
+	}
 }
 
 @media screen and (max-width: 450px){
   :root{
     --heading2: 1.8rem;
   }
+  
+  .coming .coming-text .btn-field{
+    justify-content: space-between;
+  }
+  
+.coming .coming-text .btn-field .button{
+  font-size: .85rem;
+  padding: 12px 20px;
+}
 }
